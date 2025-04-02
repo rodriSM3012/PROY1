@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="relative">
+      <div
+        class="bg-auburn text-mintCream flex flex-row px-8 py-4 justify-between items-center"
+      >
+        <span class="flex-1 text-2xl font-satisfy">Sabores del Mundo</span>
+        <!-- barra de navegacion -->
+        <nav
+          class="flex flex-row flex-2 items-center w-160 justify-between font-sansita text-[20px]"
+        >
+          <a class="flex-1 text-center" href="#">Inicio</a>
+          <a class="flex-1 text-center" href="#">Explorar</a>
+          <div class="flex-1"></div>
+          <a class="flex-1 text-center" href="#">Comunidad</a>
+          <a class="flex-1 text-center" href="#">Nuestros Chefs</a>
+        </nav>
+        <!-- iniciar sesion / registrarse -->
+        <div class="flex-1 flex flex-row justify-end">
+          <a href="#">Iniciar Sesión</a>
+          <div class="mx-3">|</div>
+          <a href="#">Registrarse</a>
+        </div>
+      </div>
+      <div class="absolute left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div class="relative rounded-[50%] w-43.5 h-27.5 bg-burntSienna">
+          <div
+            class="absolute rounded-[50%] w-40 h-25 bg-white left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+          >
+            <img
+              class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-20"
+              src="./assets/images/A_modern_and_minimalist_logo_for_a_web_platform_called_Sabores_del_Mundo_The_d_20250326152901_03.png"
+              alt="Logo Sabores del Mundo"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- left-1/2 → mueve la imagen a la mitad del tamaño del contenedor -->
+      <!-- -translate-x-1/2 -translate-y-1/2 → convierte el punto de anclaje en el centro de la imagen en vez de una esquina -->
+      <img
+        class="w-screen"
+        src="./assets/images/banner.png"
+        alt="Banner de la cabecera"
+      />
+    </header>
+  </body>
+</html>
