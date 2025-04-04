@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--↓↓↓ necesario para los custom colors ↓↓↓-->
+    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rosario:ital,wght@0,300..700;1,300..700&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-paleDogwood font-rosario">
+    <main class="flex flex-row h-screen">
+      <!-- imagen de la izquierda -->
+      <img
+        class="flex-1 w-1/2 object-cover"
+        src="./assets/images/khloe-arledge-Xu7W4u5lG9g-unsplash.jpg"
+        alt=""
+      />
+      <!-- seccion derecha -->
+      <div class="flex-1 flex flex-col mt-24">
+        <!-- LOGO -->
+        <div class="mx-auto mb-5">
+          <div
+            class="relative rounded-[50%] w-60 aspect-[1.582] bg-burntSienna"
+          >
+            <div
+              class="absolute rounded-[50%] w-[92%] h-[92%] bg-white left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+            >
+              <img
+                class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[52%]"
+                src="./assets/images/A_modern_and_minimalist_logo_for_a_web_platform_called_Sabores_del_Mundo_The_d_20250326152901_03.png"
+                alt="Logo Sabores del Mundo"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          Bienvenido a Sabores del Mundo <br /><br />
+          Inicia sesión para acceder a tu perfil, guardar tus recetas favoritas
+          y participar en la comunidad.
+        </div>
+
+        <!-- correo + contraseña -->
+        <form class="flex flex-col gap-6 mx-50 mt-8">
+          <input
+            class="bg-white rounded-[10px] p-3 border-charcoal border-3"
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Correo electrónico"
+          />
+          <input
+            class="bg-white rounded-[10px] border-charcoal border-3 p-3"
+            type="password"
+            id="password"
+            name="password"
+            required
+            placeholder="Contraseña"
+          />
+        </form>
+
+        <!-- recordar sesion + olvidar contraseña -->
+        <div class="flex flex-row mx-55 justify-between mt-3">
+          <div>
+            <input
+              type="checkbox"
+              id="remember"
+              name="remember"
+              class="w-4 h-4 mr-2 focus:ring-auburn border-gray-300 rounded"
+            />
+            <label for="remember">Recordar</label>
+          </div>
+          <div>
+            <a class="hover:underline hover:text-auburn" href="#"
+              >¿Olvidaste tu contraseña?</a
+            >
+          </div>
+        </div>
+
+        <!-- boton de iniciar sesion -->
+        <button
+          type="submit"
+          class="bg-auburn w-40 mx-auto font-bold text-white p-3 rounded-[10px] mt-10"
+        >
+          Iniciar sesión
+        </button>
+
+        <!-- crear cuenta -->
+        <a class="hover:underline hover:text-auburn mx-auto mt-5" href="#"
+          >¿No tienes una cuenta? Crea una aquí</a
+        >
+      </div>
+    </main>
+  </body>
+</html>
