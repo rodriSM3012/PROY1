@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sabores del Mundo - María González</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--↓↓↓ necesario para los custom colors ↓↓↓-->
+    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rosario:ital,wght@0,300..700;1,300..700&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-paleDogwood font-rosario">
+    <header class="relative">
+      <div
+        class="bg-auburn text-mintCream flex flex-row px-8 py-4 justify-between items-center"
+      >
+        <span class="flex-1 text-2xl font-satisfy">Sabores del Mundo</span>
+        <!-- barra de navegacion -->
+        <nav
+          class="flex flex-row flex-2 items-center w-160 justify-between font-sansita text-[20px]"
+        >
+          <a class="flex-1 text-center" href="#">Inicio</a>
+          <a class="flex-1 text-center" href="#">Explorar</a>
+          <div class="flex-1"></div>
+          <a class="flex-1 text-center" href="#">Comunidad</a>
+          <a class="flex-1 text-center" href="#">Nuestros Chefs</a>
+        </nav>
+        <!-- iniciar sesion / registrarse -->
+        <div class="flex-1 flex flex-row justify-end">
+          <a href="iniciar-sesion.html">Iniciar Sesión</a>
+          <div class="mx-3">|</div>
+          <a href="iniciar-sesion.html">Registrarse</a>
+        </div>
+      </div>
+      <div class="absolute left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div class="relative rounded-[50%] w-43.5 h-27.5 bg-burntSienna">
+          <div
+            class="absolute rounded-[50%] w-40 h-25 bg-white left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+          >
+            <img
+              class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-20"
+              src="./assets/images/A_modern_and_minimalist_logo_for_a_web_platform_called_Sabores_del_Mundo_The_d_20250326152901_03.png"
+              alt="Logo Sabores del Mundo"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- left-1/2 → mueve la imagen a la mitad del tamaño del contenedor -->
+      <!-- -translate-x-1/2 -translate-y-1/2 → convierte el punto de anclaje en el centro de la imagen en vez de una esquina -->
+      <img
+        class="w-screen"
+        src="./assets/images/banner.png"
+        alt="Banner de la cabecera"
+      />
+    </header>
+    <main class="bg-burntSienna/20 text-jet w-[1120px] mx-auto">
+      <!-- info de perfil -->
+      <div>
+        <!-- banner + pfp -->
+        <div class="relative">
+          <!-- banner -->
+          <img
+            class="w-full"
+            src="./assets/images/recetas/bannerPerfil.jpg"
+            alt=""
+          />
+          <!-- imagen de perfil -->
+          <div
+            class="bg-charcoal w-30 aspect-square rounded-full absolute left-4/5 -translate-y-1/2"
+          >
+            <img
+              class="w-25 aspect-square rounded-full absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
+              src="./assets/images/avatares/vince-veras-AJIqZDAUD7A-unsplash.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="bg bg-charcoal text-white px-10 py-6">
+          <div class="flex flex-row justify-between">
+            <div>
+              <span class="font-bold text-2xl">María González </span>
+              <div>@cocinaviajera</div>
+            </div>
+            <div>
+              <span>68.190 seguidores • 209 recetas</span>
+              <button
+                class="font-sansita bg-burntSienna rounded-full w-20 h-10 mr-50 ml-4"
+              >
+                Seguir
+              </button>
+            </div>
+          </div>
+          <!-- biografia -->
+          <div>
+            <div class="my-6">
+              <div>
+                <span class="font-bold">Ubicación:</span>
+                <span>Barcelona, España</span>
+              </div>
+              <div>
+                <span class="font-bold">Experiencia:</span
+                ><span>10 años cocinando recetas internacionales</span>
+              </div>
+              <div>
+                <span class="font-bold">Logro destacado:</span>
+                <span>Ganadora del concurso "Cocina sin Fronteras" 2022</span>
+              </div>
+            </div>
+            <p class="font-light italic">
+              ¡Hola! Soy María, una apasionada de la cocina internacional. Desde
+              que era niña, he viajado por el mundo recopilando recetas
+              auténticas de cada cultura. Mi misión es preservar técnicas
+              tradicionales mientras innovo con ingredientes locales. Creo que
+              la comida no solo alimenta el cuerpo, sino que también conecta
+              almas. En mi cocina, los sabores de Japón, México o Turquía se
+              fusionan con historias que quiero compartir contigo. <br />
+              <br />
+              Filosofía: "Cada plato es un viaje, y cada ingrediente, un
+              pasaporte."
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- seccion recetas publicadas -->
+      <section class="bg-burntSienna/50 px-12 py-12">
+        <div class="flex flex-row gap-7 mb-7">
+          <!-- receta 1 -->
+          <article
+            class="bg-burntSienna/20 p-6 w-1/3 hover:scale-105 duration-250"
+          >
+            <div class="relative">
+              <img
+                class="aspect-square object-cover"
+                src="./assets/images/recetas/sushi.jpg"
+                alt=""
+              />
+              <img
+                class="absolute rounded-full top-2 left-2 w-10"
+                src="./assets/images/icons/save2.png"
+                alt=""
+              />
+            </div>
+
+            <div class="flex flex-row justify-between mt-3">
+              <!-- star rating -->
+              <div class="relative">
+                <!-- star filled -->
+                <div class="absolute flex flex-row gap-1.25 w-4.5 mt-[2.5px]">
+                  <img class="" src="./assets/images/icons/starF.png" alt="" />
+                  <img class="" src="./assets/images/icons/starF.png" alt="" />
+                  <img class="" src="./assets/images/icons/starF.png" alt="" />
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starF.png"
+                    alt=""
+                  />
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starF.png"
+                    alt=""
+                  />
+                </div>
+                <!-- star empty -->
+                <div class="absolute flex flex-row gap-1.25 w-4.5 mt-[2.5px]">
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starE.png"
+                    alt=""
+                  />
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starE.png"
+                    alt=""
+                  />
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starE.png"
+                    alt=""
+                  />
+                  <img class="" src="./assets/images/icons/starE.png" alt="" />
+                  <img class="" src="./assets/images/icons/starE.png" alt="" />
+                </div>
+                <span class="ml-29">(10k)</span>
+              </div>
+              <!-- propiedades -->
+              <div class="flex flex-row justify-end gap-[6px] text-[15px]">
+                <span
+                  class="bg-charcoal/90 w-[25px] h-[25px] text-center rounded-full"
+                  >🍽️</span
+                >
+                <span
+                  class="bg-charcoal/90 w-[25px] h-[25px] text-center rounded-full"
+                  >🔥</span
+                >
+                <span
+                  class="bg-charcoal/90 w-[25px] h-[25px] text-center rounded-full"
+                  >⌛</span
+                >
+                <span
+                  class="bg-charcoal/90 w-[25px] h-[25px] text-center rounded-full"
+                  >🌍</span
+                >
+              </div>
+            </div>
+
+            <!-- nombre de la receta -->
+            <h3 class="font-satisfy text-[28px] my-2">
+              Sushi Tradicional Japonés
+            </h3>
+
+            <!-- tags -->
+            <div class="flex flex-row gap-2">
+              <a class="rounded-full bg-burntSienna px-2" href="#"
+                >#CocinaJaponesa</a
+              >
+              <a class="rounded-full bg-burntSienna px-2" href="#"
+                >#SushiArtístico</a
+              >
+            </div>
+          </article>
+
+          <!-- receta 2 -->
+          <article
+            class="bg-burntSienna/20 p-6 w-1/3 hover:scale-105 duration-250"
+          >
+            <div class="relative">
+              <img
+                class="aspect-square object-cover"
+                src="./assets/images/recetas/pasta.jpg"
+                alt=""
+              />
+              <img
+                class="absolute rounded-full top-2 left-2 w-10"
+                src="./assets/images/icons/save2.png"
+                alt=""
+              />
+            </div>
+
+            <div class="flex flex-row justify-between mt-3">
+              <!-- star rating -->
+              <div class="relative">
+                <!-- star filled -->
+                <div class="absolute flex flex-row gap-1.25 w-4.5 mt-[2.5px]">
+                  <img class="" src="./assets/images/icons/starF.png" alt="" />
+                  <img class="" src="./assets/images/icons/starF.png" alt="" />
+                  <img class="" src="./assets/images/icons/starF.png" alt="" />
+                  <img class="" src="./assets/images/icons/starF.png" alt="" />
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starF.png"
+                    alt=""
+                  />
+                </div>
+                <!-- star empty -->
+                <div class="absolute flex flex-row gap-1.25 w-4.5 mt-[2.5px]">
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starE.png"
+                    alt=""
+                  />
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starE.png"
+                    alt=""
+                  />
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starE.png"
+                    alt=""
+                  />
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starE.png"
+                    alt=""
+                  />
+                  <img class="" src="./assets/images/icons/starE.png" alt="" />
+                </div>
+                <span class="ml-29">(2k)</span>
+              </div>
+              <!-- propiedades -->
+              <div class="flex flex-row justify-end gap-[6px] text-[15px]">
+                <span
+                  class="bg-charcoal/90 w-[25px] h-[25px] text-center rounded-full"
+                  >🍽️</span
+                >
+                <span
+                  class="bg-charcoal/90 w-[25px] h-[25px] text-center rounded-full"
+                  >🔥</span
+                >
+                <span
+                  class="bg-charcoal/90 w-[25px] h-[25px] text-center rounded-full"
+                  >⌛</span
+                >
+                <span
+                  class="bg-charcoal/90 w-[25px] h-[25px] text-center rounded-full"
+                  >🌍</span
+                >
+              </div>
+            </div>
+
+            <!-- nombre de la receta -->
+            <h3 class="font-satisfy text-[28px] my-2">
+              Pasta Carbonara Italiana
+            </h3>
+
+            <!-- tags -->
+            <div class="flex flex-row gap-2">
+              <a class="rounded-full bg-burntSienna px-2" href="#"
+                >#CocinaItaliana</a
+              >
+              <a class="rounded-full bg-burntSienna px-2" href="#"
+                >#CarbonaraClásica</a
+              >
+            </div>
+          </article>
+
+          <!-- receta 3 -->
+          <article
+            class="bg-burntSienna/20 p-6 w-1/3 hover:scale-105 duration-250"
+          >
+            <div class="relative">
+              <img
+                class="aspect-square object-cover"
+                src="./assets/images/recetas/curry.jpg"
+                alt=""
+              />
+              <img
+                class="absolute rounded-full top-2 left-2 w-10"
+                src="./assets/images/icons/save2.png"
+                alt=""
+              />
+            </div>
+
+            <div class="flex flex-row justify-between mt-3">
+              <!-- star rating -->
+              <div class="relative">
+                <!-- star filled -->
+                <div class="absolute flex flex-row gap-1.25 w-4.5 mt-[2.5px]">
+                  <img class="" src="./assets/images/icons/starF.png" alt="" />
+                  <img class="" src="./assets/images/icons/starF.png" alt="" />
+                  <img class="" src="./assets/images/icons/starF.png" alt="" />
+                  <img class="" src="./assets/images/icons/starF.png" alt="" />
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starF.png"
+                    alt=""
+                  />
+                </div>
+                <!-- star empty -->
+                <div class="absolute flex flex-row gap-1.25 w-4.5 mt-[2.5px]">
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starE.png"
+                    alt=""
+                  />
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starE.png"
+                    alt=""
+                  />
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starE.png"
+                    alt=""
+                  />
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starE.png"
+                    alt=""
+                  />
+                  <img class="" src="./assets/images/icons/starE.png" alt="" />
+                </div>
+                <span class="ml-29">(1,3k)</span>
+              </div>
+              <!-- propiedades -->
+              <div class="flex flex-row justify-end gap-[6px] text-[15px]">
+                <span
+                  class="bg-charcoal/90 w-[25px] h-[25px] text-center rounded-full"
+                  >🍽️</span
+                >
+                <span
+                  class="bg-charcoal/90 w-[25px] h-[25px] text-center rounded-full"
+                  >🔥</span
+                >
+                <span
+                  class="bg-charcoal/90 w-[25px] h-[25px] text-center rounded-full"
+                  >⌛</span
+                >
+                <span
+                  class="bg-charcoal/90 w-[25px] h-[25px] text-center rounded-full"
+                  >🌍</span
+                >
+              </div>
+            </div>
+
+            <!-- nombre de la receta -->
+            <h3 class="font-satisfy text-[28px] my-2">
+              Curry de Pollo Tailandés
+            </h3>
+
+            <!-- tags -->
+            <div class="flex flex-row gap-2">
+              <a class="rounded-full bg-burntSienna px-2" href="#"
+                >#AromaExótico</a
+              >
+              <a class="rounded-full bg-burntSienna px-2" href="#"
+                >#ComidaPicante</a
+              >
+            </div>
+          </article>
+        </div>
+        <div class="flex flex-row gap-7">
+          <!-- receta 4 -->
+          <article
+            class="bg-burntSienna/20 p-6 w-1/3 hover:scale-105 duration-250"
+          >
+            <div class="relative">
+              <img
+                class="aspect-square object-cover"
+                src="./assets/images/recetas/tacos.jpg"
+                alt=""
+              />
+              <img
+                class="absolute rounded-full top-2 left-2 w-10"
+                src="./assets/images/icons/save2.png"
+                alt=""
+              />
+            </div>
+
+            <div class="flex flex-row justify-between mt-3">
+              <!-- star rating -->
+              <div class="relative">
+                <!-- star filled -->
+                <div class="absolute flex flex-row gap-1.25 w-4.5 mt-[2.5px]">
+                  <img class="" src="./assets/images/icons/starF.png" alt="" />
+                  <img class="" src="./assets/images/icons/starF.png" alt="" />
+                  <img class="" src="./assets/images/icons/starF.png" alt="" />
+                  <img class="" src="./assets/images/icons/starF.png" alt="" />
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starF.png"
+                    alt=""
+                  />
+                </div>
+                <!-- star empty -->
+                <div class="absolute flex flex-row gap-1.25 w-4.5 mt-[2.5px]">
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starE.png"
+                    alt=""
+                  />
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starE.png"
+                    alt=""
+                  />
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starE.png"
+                    alt=""
+                  />
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starE.png"
+                    alt=""
+                  />
+                  <img class="" src="./assets/images/icons/starE.png" alt="" />
+                </div>
+                <span class="ml-29">(1,6k)</span>
+              </div>
+              <!-- propiedades -->
+              <div class="flex flex-row justify-end gap-[6px] text-[15px]">
+                <span
+                  class="bg-charcoal/90 w-[25px] h-[25px] text-center rounded-full"
+                  >🍽️</span
+                >
+                <span
+                  class="bg-charcoal/90 w-[25px] h-[25px] text-center rounded-full"
+                  >🔥</span
+                >
+                <span
+                  class="bg-charcoal/90 w-[25px] h-[25px] text-center rounded-full"
+                  >⌛</span
+                >
+                <span
+                  class="bg-charcoal/90 w-[25px] h-[25px] text-center rounded-full"
+                  >🌍</span
+                >
+              </div>
+            </div>
+
+            <!-- nombre de la receta -->
+            <h3 class="font-satisfy text-[28px] my-2">Tacos al Pastor</h3>
+
+            <!-- tags -->
+            <div class="flex flex-row gap-2">
+              <a class="rounded-full bg-burntSienna px-2" href="#"
+                >#MexicanoAuténtico</a
+              >
+              <a class="rounded-full bg-burntSienna px-2" href="#"
+                >#StreetFood</a
+              >
+            </div>
+          </article>
+
+          <!-- receta 5 -->
+          <article
+            class="bg-burntSienna/20 p-6 w-1/3 hover:scale-105 duration-250"
+          >
+            <div class="relative">
+              <img
+                class="aspect-square object-cover"
+                src="./assets/images/recetas/ratatouille.jpg"
+                alt=""
+              />
+              <img
+                class="absolute rounded-full top-2 left-2 w-10"
+                src="./assets/images/icons/save2.png"
+                alt=""
+              />
+            </div>
+
+            <div class="flex flex-row justify-between mt-3">
+              <!-- star rating -->
+              <div class="relative">
+                <!-- star filled -->
+                <div class="absolute flex flex-row gap-1.25 w-4.5 mt-[2.5px]">
+                  <img class="" src="./assets/images/icons/starF.png" alt="" />
+                  <img class="" src="./assets/images/icons/starF.png" alt="" />
+                  <img class="" src="./assets/images/icons/starF.png" alt="" />
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starF.png"
+                    alt=""
+                  />
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starF.png"
+                    alt=""
+                  />
+                </div>
+                <!-- star empty -->
+                <div class="absolute flex flex-row gap-1.25 w-4.5 mt-[2.5px]">
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starE.png"
+                    alt=""
+                  />
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starE.png"
+                    alt=""
+                  />
+                  <img class="" src="./assets/images/icons/starE.png" alt="" />
+                  <img class="" src="./assets/images/icons/starE.png" alt="" />
+                  <img class="" src="./assets/images/icons/starE.png" alt="" />
+                </div>
+                <span class="ml-29">(2,1k)</span>
+              </div>
+              <!-- propiedades -->
+              <div class="flex flex-row justify-end gap-[6px] text-[15px]">
+                <span
+                  class="bg-charcoal/90 w-[25px] h-[25px] text-center rounded-full"
+                  >🍽️</span
+                >
+                <span
+                  class="bg-charcoal/90 w-[25px] h-[25px] text-center rounded-full"
+                  >🔥</span
+                >
+                <span
+                  class="bg-charcoal/90 w-[25px] h-[25px] text-center rounded-full"
+                  >⌛</span
+                >
+                <span
+                  class="bg-charcoal/90 w-[25px] h-[25px] text-center rounded-full"
+                  >🌍</span
+                >
+              </div>
+            </div>
+
+            <!-- nombre de la receta -->
+            <h3 class="font-satisfy text-[28px] my-2">
+              Ratatouille Tradicional
+            </h3>
+
+            <!-- tags -->
+            <div class="flex flex-row gap-2">
+              <a class="rounded-full bg-burntSienna px-2" href="#"
+                >#RecetaRústica</a
+              >
+              <a class="rounded-full bg-burntSienna px-2" href="#">#Vegano</a>
+            </div>
+          </article>
+
+          <!-- receta 6 -->
+          <article
+            class="bg-burntSienna/20 p-6 w-1/3 hover:scale-105 duration-250"
+          >
+            <div class="relative">
+              <img
+                class="aspect-square object-cover"
+                src="./assets/images/recetas/padthai.jpg"
+                alt=""
+              />
+              <img
+                class="absolute rounded-full top-2 left-2 w-10"
+                src="./assets/images/icons/save2.png"
+                alt=""
+              />
+            </div>
+
+            <div class="flex flex-row justify-between mt-3">
+              <!-- star rating -->
+              <div class="relative">
+                <!-- star filled -->
+                <div class="absolute flex flex-row gap-1.25 w-4.5 mt-[2.5px]">
+                  <img class="" src="./assets/images/icons/starF.png" alt="" />
+                  <img class="" src="./assets/images/icons/starF.png" alt="" />
+                  <img class="" src="./assets/images/icons/starF.png" alt="" />
+                  <img class="" src="./assets/images/icons/starF.png" alt="" />
+                  <img class="" src="./assets/images/icons/starF.png" alt="" />
+                </div>
+                <!-- star empty -->
+                <div class="absolute flex flex-row gap-1.25 w-4.5 mt-[2.5px]">
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starE.png"
+                    alt=""
+                  />
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starE.png"
+                    alt=""
+                  />
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starE.png"
+                    alt=""
+                  />
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starE.png"
+                    alt=""
+                  />
+                  <img
+                    class="invisible"
+                    src="./assets/images/icons/starE.png"
+                    alt=""
+                  />
+                </div>
+                <span class="ml-29">(1,8k)</span>
+              </div>
+              <!-- propiedades -->
+              <div class="flex flex-row justify-end gap-[6px] text-[15px]">
+                <span
+                  class="bg-charcoal/90 w-[25px] h-[25px] text-center rounded-full"
+                  >🍽️</span
+                >
+                <span
+                  class="bg-charcoal/90 w-[25px] h-[25px] text-center rounded-full"
+                  >🔥</span
+                >
+                <span
+                  class="bg-charcoal/90 w-[25px] h-[25px] text-center rounded-full"
+                  >⌛</span
+                >
+                <span
+                  class="bg-charcoal/90 w-[25px] h-[25px] text-center rounded-full"
+                  >🌍</span
+                >
+              </div>
+            </div>
+
+            <!-- nombre de la receta -->
+            <h3 class="font-satisfy text-[28px] my-2">
+              Pad Thai con Camarones
+            </h3>
+
+            <!-- tags -->
+            <div class="flex flex-row gap-2">
+              <a class="rounded-full bg-burntSienna px-2" href="#"
+                >#SinGluten</a
+              >
+              <a class="rounded-full bg-burntSienna px-2" href="#"
+                >#SaborAsiático</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-charcoal text-white px-45 py-12 flex flex-row">
+      <!-- parte izq -->
+      <div class="flex flex-col w-5/9 justify-between">
+        <!-- LOGO -->
+        <div class="relative rounded-[50%] w-43.5 h-27.5 bg-burntSienna">
+          <div
+            class="absolute rounded-[50%] w-40 h-25 bg-white left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+          >
+            <img
+              class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-20"
+              src="./assets/images/A_modern_and_minimalist_logo_for_a_web_platform_called_Sabores_del_Mundo_The_d_20250326152901_03.png"
+              alt="Logo Sabores del Mundo"
+            />
+          </div>
+        </div>
+        <span class=""
+          >© 2025 Sabores del Mundo. Todos los derechos reservados. <br />
+          Descubre y comparte las mejores recetas con nuestra comunidad
+          gastronómica.</span
+        >
+      </div>
+      <!-- parte der -->
+      <div class="flex flex-row w-4/9 gap-12 justify-between">
+        <div class="flex flex-col gap-1">
+          <a href="#">Inicio</a>
+          <a href="#">Explorar recetas</a>
+          <a href="#">Publicar receta</a>
+          <a href="#">Blog / Noticias</a>
+          <a href="#">Sobre nosotros</a>
+          <a href="#">Contacto</a>
+        </div>
+        <div class="flex flex-col gap-1">
+          <span class="font-bold mb-3">Redes Sociales</span>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">YouTube</a>
+          <a href="#">TikTok</a>
+          <a href="#">Pinterest</a>
+        </div>
+        <div class="flex flex-col gap-6">
+          <a href="#"> Política de privacidad</a>
+          <a href="#"> Términos y condiciones </a>
+          <a href="#"> Política de cookies</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
